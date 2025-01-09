@@ -1,6 +1,6 @@
 baseurl: '/'
 permalink: pretty
-title: 'Jekyll Serif'
+title: 'My Portfolio'
 
 logo:
   mobile: "images/logo/logo-mobile.svg"
@@ -37,6 +37,16 @@ sass:
 
 plugins:
   - jekyll-environment-variables
+
+# Prevent these files and directories from being excluded during the build process
+include:
+  - images
+  - assets
+
+# Ensure these files/folders are kept during rebuilds
+keep_files:
+  - images
+  - assets
 
 exclude:
   - Gemfile

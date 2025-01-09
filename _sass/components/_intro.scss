@@ -2,26 +2,31 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 60px;
   overflow: hidden;
+
   @include media-breakpoint-up(md) {
-    padding-top: 140px;
+    padding-top: 100px;
     padding-bottom: 140px;
   }
+
   h1 {
     color: $black;
     font-size: 42px;
     font-weight: bold;
     line-height: 1.2;
+
     @include media-breakpoint-up(md) {
       width: 80%;
       font-size: 48px;
     }
+
     @include media-breakpoint-up(lg) {
       font-size: 50px;
     }
   }
+
   h2 {
     width: 80%;
     font-size: 1.2rem;
@@ -30,18 +35,30 @@
     color: $black;
     font-family: $font-family-base;
   }
+
   p {
     font-size: 1.2rem;
     font-weight: light;
     line-height: 1.5;
     color: $steel;
+
     @include media-breakpoint-up(md) {
       width: 80%;
     }
   }
+
+  .profile-picture {
+    width: 160px; /* Size of the profile picture */
+    height: 160px; 
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures proper scaling of the image */
+    margin-bottom: 20px; /* Spacing below the profile picture */
+    border: 3px solid $primary; /* Optional border around the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
 }
 
 .intro-small {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 30px;
 }
