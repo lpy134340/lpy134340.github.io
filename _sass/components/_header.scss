@@ -2,28 +2,50 @@
   color: $primary;
   background-color: #ffffff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps items spaced out */
   align-items: center;
-  // box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
   border-bottom: 1px solid $white-offset;
-  padding: 10px 0px;
-  margin: 20px 0 20px;
+  padding: 10px 0;
+  margin: 20px 0;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  &.header-absolute {
-    position: absolute;
-    top: 20px;
-    z-index: 10;
     width: 100%;
+    max-width: 1200px; /* Optional: constrain header width */
+    margin-left: auto + 10px;
   }
-}
-.lock-scroll {
-  .header {
-    &.header-absolute {
-      position: static;
+
+  .logo {
+    margin-left: 5%;
+    margin-right: 25%; /* Increase space between logo and navigation */
+  }
+
+  .logo-mobile {
+    display: none; /* Hidden by default unless for mobile */
+  }
+
+  @include media-breakpoint-down(md) {
+    .logo {
+      margin-right: 20px; /* Reduce spacing for smaller screens */
     }
+
+    .logo-mobile {
+      display: block; /* Show mobile logo on smaller screens */
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 25px; /* Adds space between navigation links */
+  }
+
+  a {
+    font-size: 18px;
+    font-weight: bold;
+    color: $primary;
+    text-decoration: none;
+    margin-right: 15px;
   }
 }
